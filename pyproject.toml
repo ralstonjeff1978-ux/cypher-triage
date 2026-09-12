@@ -1,0 +1,14 @@
+[project]
+name = "cyphertriage"
+version = "0.0.1"
+description = "Blue-team static triage for suspicious files — a cypher-scope sibling that reports a residual hidden-payload bound and finds stego/second-stage/prompt-injection payloads in one pass."
+requires-python = ">=3.12"
+# Runtime dependency: cypher-scope (the `cypherscope` package). It is not yet
+# published to PyPI, so it is resolved at import time from CYPHERSCOPE_PATH or a
+# sibling checkout (see cyphertriage/_compat.py). Phase 1 adds: lief, pefile,
+# yara-x, capa, ppdeep, py-tlsh, vt-py.
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
